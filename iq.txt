@@ -1,0 +1,356 @@
+1. what is linux?
+	Linus Torvalds developed Linux, a Unix like , free ,open source, and kernel o.s, Mainly it is designed for servers, Systems,Embedded 		Devices,mobile Devices and mainframes and is also supported on major computer platforms such as ARM,x86 and SPARC.
+	ARM stands for Advanced RISC Machine. ARM architectures represent a different approach to how the hardware for a system is designed 		when compared to more familiar server architectures like x86.
+	SPARC (Scalable Processor ARChitecture) is a reduced instruction set computer (RISC) instruction set architecture originally 
+		developed by Sun Microsystems. Its design was strongly influenced by the experimental Berkeley RISC system developed in the 		    early 1980s.
+
+2. Feautures of Linux?
+	Linux is free and easily availabale.
+	It is more secure than other 0.s, beacuse it uses Security auditing and password authentication process.
+	It has personal software repository.
+	It includes multiple languages throughout the world,Hence Linux supports different language keyboards.
+	It offers CLI and GUI to use different commands and App's Such as Firefox,VLC, etc.
+
+3. Linux Distros?
+	UBUNTU | DEBIAN | CENTOS | REDHAT | FEDORA
+
+4. Diff btw Linux and Windows?
+
+		Linux:
+			It is free and Open Source Operating System.
+			Linux is highly secure.
+			As apath seperator , it uses a forward slash (\).
+			Linux is more efficient than windows.
+			it uses a monolithic Kernel.
+			Linux file systems are case-sensitive.
+		
+		Windows:
+			It is not open source and is free to use.
+			Windows is less secure compared to linux.
+			Windows uses a backward slash between the directories (/).
+			Windows is less efficient.
+			It uses a microkernel.
+			Its file system in case-insensitive.
+
+5. Define the basic components of linux?
+	Kernel:
+		Kernel  is a core part of 0.s that works as a bridge between Hardware and Software
+	Shell:
+		Shell is an interface between kernel and user
+	GUI:
+		Offers different way to interact with the system, Known as the Graphical User Interface.
+	
+	Application Programs:
+		It is designed to perform a bundle of tasks through a bundle of functions.
+	
+	System Utilities:
+		It is the software functions through which users manage the system.
+
+6. File permission?
+	
+	Read: R
+		Users open and read the files with this permission
+	Write: W
+		Users can open and modify the files.
+	Execute: X
+		Users can Run the file.
+
+	 Default umask value: 022
+			Default file permission: 664
+
+
+	To set userid: chmod u+s  ; Octal 4*** ; *s * * ; s-execute(x) in palce of user.
+	To set Groupid: chomd g+s ; Octal 2*** ; * *s * ; s-execute(x) in place of Group.
+	
+
+	Sticky bit: 
+	chmod u+t *** where t indicates sticky bit which only owner user or root user can delete the file or directory.
+
+
+	Defualt Syntax for permissions to modify : chmod ugo * rwx  filename.
+
+7. What is the linux kernel?
+	It is known as low-leve software system.
+	The linux kernel tracks the resources and provides a user interface. This o.s is released uner  Genral Publi lience (GPL).
+	Hence every project is released under it. So, You can edit the linux kernel legally.
+
+8. LILO?
+	Linux Loader and Linux boot loader. Most of the o.s comes with boot loader. where as in linux we have to install a seperate boot 
+	loader and LILo is one of the boot loaders.
+
+9. What is shell in Linux?
+	csh ( C shell):
+		This shell ofeers spell checking and is similar to C syntax.
+	ksh ( Korn Shell):
+		A high level shell for programming languages.
+	ssh (Z shell):
+		Z shell has unique nature such as closing comments,startup-files,file name generating, and observing logout/login watching.
+	bash (Bourne Again Shell):
+		This is defualt shell for linux.
+	Fish (Friendly Interactive shell):
+		This shell Provides auto-suggestion, Web-based Configuration .. etc.,
+
+10. What is Root Account?
+	The root is like user's name for the system admiistrator account in Linux. Thye root account provides complete system control, which	    an ordinary user cannot do.
+
+11. Describe CLI and GUI in Linux?
+	CLI: Command line interface , it takes input as a command runs the tasks of the system.
+	GUI: Graphical user interface or the human-computer interface. It uses icons,images,memus and windows which can be manipulated 	
+		through mouse.
+
+12. What is Swap Space?
+	Linux uses swap space to expand RAM. Linux uses this extra space to hold concurrently running programs temporarily.
+	
+13. What is diff btw Soft Link and Hard Link?
+	Hard Link:
+		It includes Original Content,
+		HArd Links are faster compared to Soft Link,
+		It shares similar node numbers,
+		There is no relative path for hard link,
+		It didn't link the directories,
+		Any change in this link  reflects other files directly,
+		It uses less memory.
+	Soft Link:
+		It includes the Original file location,
+		Soft Links are slower,
+		It shares different node,
+		It Links the directories,
+		Relative paths are used for soft link,
+		Every change in this link reflects its hard link and the actual file directly,
+		It uses more memory.
+
+14. How do users create Symbolic link?
+
+		ln -s <file-name>
+
+
+15. what do you understand about the standard streams?
+	Stdin (Standard Input)
+	Stdout(Standard output)
+	Stderr(Standard error)
+
+	Under Linux these standard stream channel communication of input and output bw program and their environment
+
+
+16. How do you mount and unmount filesystems in Linux?
+
+	In this case, you can use the ‘mount’ and ‘umount’ commands.
+
+	For mounting:
+
+    			First, identify the partition through the fdisk -l command. You can also use the lsblk command for it.
+    	After identifying the partition, create the directory which will work as the mount point. For example, running the mkdir /mnt/mountpnt will create the mountpnt directory as the mount point.
+    	Finally, you can run sudo mount <partition> <mount_point_directory> to complete the mounting.
+
+	For Unmounting:
+
+		Once you check if the specific filesystem is in use, you can run the `sudo umount <mount_point_directory>` for unmounting. If you want to learn more about the mount command in Linux, check	    out this brief guide.
+
+
+17. How do you troubleshoot network connectivity issues in Linux?
+
+	There are multiple ways to troubleshoot the network connectivity and find the issue correctly:
+
+	Check the Internet Connectivity:
+
+	First of all, please check if the internet connection option is on and also check the cables to find if there is any issue with it.
+
+	Verify the Network Configuration:
+
+    		Please check that your network is configured correctly and the network interface has your IP address. You can check it by running the ip addr or ifconfig commands.
+    	You can also run the ip route command to check if the default gateway is set properly.
+    	Finally, verify the DNS server configuration in the /etc/resolv.conf file.
+
+	Check the Firewall:
+
+	Sometimes, firewall rules block the internet connection for the system’s security. Hence, you can run the ufw or iptables command to modify the firewall rules.
+
+	Network Interface:
+
+	You can restart your network interface through the ifup and ifdown commands. Once you restart the network interface, please reboot the system to make changes successful.
+
+
+18. How do you list all the processes running in Linux?
+
+	You can list the currently running process in Linux through various commands such as:
+
+	ps Command:
+
+	The ps command displays brief information about the running processes. You can use the ps -f or ps -f command because the -f option shows the full-format result, and the -e option displays all pro	    cesses. Moreover, you can use the ps auxf command to get a detailed list of processes.
+
+	top and htop Command:
+
+    		The top command displays the real-time details about the system process and the complete resource usage.
+    		The htop command is the improved version of the top command because it displays the color-coded list with additional features such as sorting, filtering, sorting, etc.
+
+19. What is the chmod command in Linux, and how do you use it?
+
+		You can use the chmod command to change the file permissions of the directories. It offers a simple way to control the read and write permissions. For instance, if you want to change the
+		permission of the ABC.sh script and give it the write and executable permission, you can run the below command:
+
+					chmod u+wx ABC.sh
+
+		The chmod command is not limited to the write (w), read (r), and executable (x) permissions because there are symbolic modes and numeric modes, which you can learn from this guide.
+
+20. How do you check disk space usage?
+
+	There are some simple commands you can use to check disk space usage, such as:
+
+	df Command:
+
+		The df or disk-free command shows the used and the available disk space. You can use the additional options to check disk space differently. For instance, you can use the df -h command to 	    check the disk usage in the human-readable format.
+
+	du Command:
+
+		The du or disk usage command estimates and shows the disk space usage, so running the du command with no option shows the disk usage of your current directory. However, you can run the 
+	following command to check the disk usage of a specific directory:
+
+
+		du -sh ~/<directory> 
+
+	ncdu Command:
+
+			The NCurses Disk Usage, or ncdu command, displays more interactive disk usage. Similar to the du command, the ncdu command also requires the path of the specific directory to check 	    its space.
+
+21. How do you find the process ID (PID) of a running process?
+
+	You can use the following command to find the Process ID or PID of the currently running process:
+
+	pgrep Command:
+
+	The pgrep command shows the PID of a process through its name or other different attributes. For example, you can find the PID of process_1 using the below command:
+
+	pgrep <process_1>
+
+	ps Command:
+
+	ps command not only displays the currently running process but also shows the process’s PID. However, if you want to check the PID of a specific process, you can combine the ps with the grep 
+	command:
+
+	ps -e | grep -i <process_1> 
+
+
+22. What is the rsync command, and how do you use this command for synchronization?
+
+				The rsync command is used to synchronize and transfer the files in Linux. It synchronizes files between two local systems,directories, or a network. The basic rsync command 	    contains the following:
+
+	rsync <options> <source> <destination>
+
+	For example, let’s synchronize between Documents and the Downloads directory. For this, you need to run the following command:
+
+	rsync -av ~/Documents ~/Downloads
+
+	If you want to go one step further, then you can use the below command:
+
+	rsync -avz --delete ~/Documents ~/Downloads
+
+	In the above command:
+
+    	The -a option preserves all the permissions and other attributes
+    	The -v option displays the detailed output of the synchronization
+    	The -z allows compression that decreases the bandwidth use.
+        The –delete option removes the file in the Downloads that do not exist in the Documents directory.
+
+23. How do you create a user account?
+
+	You can use adduser and useradd commands to create a user for the system.
+
+	useradd Command:
+
+	Let’s create a username, “Ron,” and provide a password for accessing the system:
+
+	useradd Ron 
+	passwd Ron 
+
+	You can also explore the useradd command’s additional options to modify the new user’s permissions and privileges.
+
+	adduser Command:
+
+	The adduser command is similar to the useradd command, so let’s create a username “Shawn”:
+
+	adduser Shawn
+	passwd Shawn
+
+
+24. How do you format a disk in Linux?
+
+	The mkfs or make file system command helps format the disk in the Linux system. All you need to do is use the following method to format the disk:
+
+	First, run the lsblk command to list the available partitions and identify which disk you want to format.
+
+	If the selected disk is mounted, then unmount it through the following command:
+
+	umount <partition>
+
+	Now, find the file system type of the disk, like EXT4, NTFS, or XFS. Once you are done then, run one of the following commands according to the file system type:
+
+	mkfs.ext4 <partition>
+	mkfs.xfs <partition>
+	mkfs.ntfs <partition>
+
+	Finally, mount the disk again through the mount command after the successful format. Moreover, please ensure that you have created a complete disk backup to eliminate the chances of data loss.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
